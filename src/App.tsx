@@ -11,8 +11,6 @@ import ExperienceForm from './components/form/ExperienceForm';
 import EducationForm from './components/form/EducationForm';
 import SkillsForm from './components/form/SkillsForm';
 import Preview from './components/preview/Preview';
-import './style.css';
-import './components/form/Form.css';
 
 function App() {
   const [general, setGeneral] = useState(createUser(...example.general));
