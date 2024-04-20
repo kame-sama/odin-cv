@@ -1,6 +1,7 @@
 import Button from '../Button';
 import Input from '../Input';
 import TextArea from '../TextArea';
+import { Fragment } from 'react/jsx-runtime';
 
 interface ExperienceProps {
   data: Experience[];
@@ -76,15 +77,14 @@ function ExperienceForm({
   return (
     <div className="form-section">
       {data.map((d) => (
-        <>
+        <Fragment key={d.id}>
           <Form
-            key={d.id}
             data={d}
             handleInputChange={handleInputChange}
             handleDeleteClick={handleDeleteClick}
           />
           <hr />
-        </>
+        </Fragment>
       ))}
       <Button id="add-exp" onClick={handleAddClick}>
         Add

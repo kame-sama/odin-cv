@@ -1,5 +1,6 @@
 import Button from '../Button';
 import Input from '../Input';
+import { Fragment } from 'react/jsx-runtime';
 
 interface EducationProps {
   data: Education[];
@@ -67,15 +68,14 @@ function EducationForm({
   return (
     <div className="form-section">
       {data.map((d) => (
-        <>
+        <Fragment key={d.id}>
           <Form
-            key={d.id}
             data={d}
             handleInputChange={handleInputChange}
             handleDeleteClick={handleDeleteClick}
           />
           <hr />
-        </>
+        </Fragment>
       ))}
       <Button id="add-edu" onClick={handleAddClick}>
         Add

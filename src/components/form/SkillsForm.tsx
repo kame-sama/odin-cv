@@ -1,6 +1,7 @@
 import Button from '../Button';
 import Input from '../Input';
 import TextArea from '../TextArea';
+import { Fragment } from 'react/jsx-runtime';
 
 interface SkillsProps {
   data: Skill[];
@@ -48,15 +49,14 @@ function SkillsForm({
   return (
     <div className="form-section">
       {data.map((d) => (
-        <>
+        <Fragment key={d.id}>
           <Form
-            key={d.id}
             data={d}
             handleInputChange={handleInputChange}
             handleDeleteClick={handleDeleteClick}
           />
           <hr />
-        </>
+        </Fragment>
       ))}
       <Button id="add-skill" onClick={handleAddClick}>
         Add
