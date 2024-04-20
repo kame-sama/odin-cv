@@ -28,7 +28,15 @@ svg {
   height: auto;
 }
 
+hr {
+  height: 2px;
+  background-color: black;
+  border: 0;
+  margin: 0.5rem 0;
+}
+
 #root {
+  padding: 1rem;
   display: flex;
   gap: 1rem;
   align-items: flex-start;

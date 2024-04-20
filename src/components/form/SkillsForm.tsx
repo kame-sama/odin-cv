@@ -32,7 +32,9 @@ function Form({ data, handleInputChange, handleDeleteClick }: FormProps) {
           handleInputChange('description', data.id, e.target.value)
         }
       />
-      <Button onClick={() => handleDeleteClick(data.id)}>Delete</Button>
+      <Button variant="delete" onClick={() => handleDeleteClick(data.id)}>
+        Delete
+      </Button>
     </div>
   );
 }
@@ -45,17 +47,20 @@ function SkillsForm({
 }: SkillsProps) {
   return (
     <div className="form-section">
+      {data.map((d) => (
+        <>
+          <Form
+            key={d.id}
+            data={d}
+            handleInputChange={handleInputChange}
+            handleDeleteClick={handleDeleteClick}
+          />
+          <hr />
+        </>
+      ))}
       <Button id="add-skill" onClick={handleAddClick}>
         Add
       </Button>
-      {data.map((d) => (
-        <Form
-          key={d.id}
-          data={d}
-          handleInputChange={handleInputChange}
-          handleDeleteClick={handleDeleteClick}
-        />
-      ))}
     </div>
   );
 }

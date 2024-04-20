@@ -51,7 +51,9 @@ function Form({ data, handleInputChange, handleDeleteClick }: FormProps) {
         type="month"
         onChange={(e) => handleInputChange('end', data.id, e.target.value)}
       />
-      <Button onClick={() => handleDeleteClick(data.id)}>Delete</Button>
+      <Button variant="delete" onClick={() => handleDeleteClick(data.id)}>
+        Delete
+      </Button>
     </div>
   );
 }
@@ -64,17 +66,20 @@ function EducationForm({
 }: EducationProps) {
   return (
     <div className="form-section">
+      {data.map((d) => (
+        <>
+          <Form
+            key={d.id}
+            data={d}
+            handleInputChange={handleInputChange}
+            handleDeleteClick={handleDeleteClick}
+          />
+          <hr />
+        </>
+      ))}
       <Button id="add-edu" onClick={handleAddClick}>
         Add
       </Button>
-      {data.map((d) => (
-        <Form
-          key={d.id}
-          data={d}
-          handleInputChange={handleInputChange}
-          handleDeleteClick={handleDeleteClick}
-        />
-      ))}
     </div>
   );
 }

@@ -38,6 +38,10 @@
   resize: vertical;
 }
 
+.sub-form {
+  position: relative;
+}
+
 .button {
   cursor: pointer;
   background-color: black;
@@ -46,7 +50,24 @@
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   text-align: center;
-  margin: 0 auto;
+}
+
+.button.button-delete {
+  font-size: 0.9rem;
+  position: absolute;
+  top: 2;
+  right: 0;
+  background-color: transparent;
+  color: red;
+  padding: 0;
+  border-radius: 0;
+  transition: font-weight 200ms ease;
+}
+
+.button.button-delete:hover,
+.button.button-delete:focus {
+  background-color: transparent;
+  font-weight: 500;
 }
 
 .button:hover {
