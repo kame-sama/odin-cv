@@ -1,11 +1,11 @@
-const general = ['John', 'Doe', 'Senior product Designer', '/example.png'];
+const general = ['Olivia', 'Miller', 'Software Engineer', '/picture.jpg'];
 
 const contacts = [
-  '+0 000 000 0000',
-  'johndoe@gmail.com',
-  'john-doe',
-  'john-doe',
-  'username.com',
+  '555-555-5555',
+  'oliviamiller.is.not.real@gmail.com',
+  'olivia-miller-is-not-real',
+  'olivia-miller-is-not-real',
+  'olivia-miller-is-not-real.com',
 ];
 
 const experience = [
@@ -14,28 +14,28 @@ const experience = [
     '@Company name',
     '2024-01',
     '',
-    'Startup SaaS, Business vision, UX methodology, Design system, UI Kit, User testing, Performance',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, fugit architecto. Nostrum, autem!',
   ],
   [
     'Job name',
     '@Company name',
     '2024-01',
     '',
-    'Startup SaaS, Business vision, UX methodology, Design system, UI Kit, User testing, Performance',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, fugit architecto. Nostrum, autem!',
   ],
   [
     'Job name',
     '@Company name',
     '2024-01',
     '',
-    'Startup SaaS, Business vision, UX methodology, Design system, UI Kit, User testing, Performance',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, fugit architecto. Nostrum, autem!',
   ],
   [
     'Job name',
     '@Company name',
     '2024-01',
     '',
-    'Startup SaaS, Business vision, UX methodology, Design system, UI Kit, User testing, Performance',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, fugit architecto. Nostrum, autem!',
   ],
 ];
 
@@ -48,11 +48,11 @@ const education = [
 const skills = [
   [
     'Category',
-    'User research, Quali. & quanti. survey, Solution design, Wireframe & Prototyping, User testing & analysis',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, fugit architecto. Nostrum, autem!',
   ],
   [
     'Category',
-    'Interface design, CMS, 3D Modeling, Texture and animation, AR, Integration',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, fugit architecto. Nostrum, autem!',
   ],
   ['Languages', 'English C2, French C2, Spanish B2'],
 ];
