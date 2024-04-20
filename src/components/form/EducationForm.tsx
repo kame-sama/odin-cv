@@ -64,7 +64,6 @@ function EducationForm({
 }: EducationProps) {
   return (
     <div className="form-section">
-      <h2>Education</h2>
       <Button id="add-edu" onClick={handleAddClick}>
         Add
       </Button>

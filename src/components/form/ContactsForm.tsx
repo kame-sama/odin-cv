@@ -8,7 +8,6 @@ interface ContactsProps {
 function ContactsForm({ data, handleInputChange }: ContactsProps) {
   return (
     <div className="form-section">
-      <h2>Contacts</h2>
       <Input
         label="Phone number: "
         id="phone-number"

@@ -73,7 +73,6 @@ function ExperienceForm({
 }: ExperienceProps) {
   return (
     <div className="form-section">
-      <h2>Experience</h2>
       <Button id="add-exp" onClick={handleAddClick}>
         Add
       </Button>

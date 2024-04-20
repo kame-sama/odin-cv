@@ -5,6 +5,7 @@ import createExperience from './data/create-experience';
 import createSkill from './data/create-skill';
 import createUser from './data/create-user';
 import * as example from './data/example-data';
+import Accordion from './components/Accordion';
 import GeneralForm from './components/form/GeneralForm';
 import ContactsForm from './components/form/ContactsForm';
 import ExperienceForm from './components/form/ExperienceForm';
@@ -118,37 +119,64 @@ function App() {
     );
   };
 
-  return (
-    <>
-      <div className="form">
+  const accordionItems: AccordionItem[] = [
+    {
+      title: 'General',
+      content: (
         <GeneralForm
           data={general}
           handleInputChange={handleGeneralChange}
           handleFileUpload={handleGeneralUpload}
         />
+      ),
+    },
+    {
+      title: 'Contacts',
+      content: (
         <ContactsForm
           data={contacts}
           handleInputChange={handleContactsChange}
         />
+      ),
+    },
+    {
+      title: 'Experience',
+      content: (
         <ExperienceForm
           data={experience}
           handleInputChange={handleExperienceChange}
           handleAddClick={handleExperienceAdd}
           handleDeleteClick={handleExperienceDeleted}
         />
+      ),
+    },
+    {
+      title: 'Education',
+      content: (
         <EducationForm
           data={education}
           handleInputChange={handleEducationChange}
           handleAddClick={handleEducationAdd}
           handleDeleteClick={handleEducationDelete}
         />
+      ),
+    },
+    {
+      title: 'Skills',
+      content: (
         <SkillsForm
           data={skills}
           handleInputChange={handleSkillsChange}
           handleAddClick={handleSkillAdd}
           handleDeleteClick={handleSkillDelete}
         />
-      </div>
+      ),
+    },
+  ];
+
+  return (
+    <>
+      <Accordion items={accordionItems} />
       <Preview
         general={general}
         contacts={contacts}

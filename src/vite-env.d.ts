@@ -37,3 +37,15 @@ type Skill = {
   category: string;
   description: string;
 };
+
+type FormSection =
+  | 'General'
+  | 'Contacts'
+  | 'Experience'
+  | 'Education'
+  | 'Skills';
+
+interface AccordionItem {
+  title: FormSection;
+  content: JSX.Element;
+}

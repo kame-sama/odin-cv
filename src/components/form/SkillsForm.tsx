@@ -45,7 +45,6 @@ function SkillsForm({
 }: SkillsProps) {
   return (
     <div className="form-section">
-      <h2>Skills</h2>
       <Button id="add-skill" onClick={handleAddClick}>
         Add
       </Button>

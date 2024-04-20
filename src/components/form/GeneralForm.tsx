@@ -15,7 +15,6 @@ function GeneralForm({
 }: GeneralProps) {
   return (
     <div className="form-section">
-      <h2>General</h2>
       <Input
         label="First name: "
         id="first-name"
