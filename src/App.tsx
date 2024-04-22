@@ -12,6 +12,7 @@ import ExperienceForm from './components/form/ExperienceForm';
 import EducationForm from './components/form/EducationForm';
 import SkillsForm from './components/form/SkillsForm';
 import Preview from './components/preview/Preview';
+import Controls from './components/Controls';
 
 function App() {
   const [general, setGeneral] = useState(createUser(...example.general));
@@ -174,8 +175,28 @@ function App() {
     },
   ];
 
+  const handleClearClick = () => {
+    setGeneral(createUser());
+    setContacts(createContacts());
+    setExperience([]);
+    setEducation([]);
+    setSkills([]);
+  };
+
+  const handleExampleClick = () => {
+    setGeneral(createUser(...example.general));
+    setContacts(createContacts(...example.contacts));
+    setExperience(example.experience.map((exp) => createExperience(...exp)));
+    setEducation(example.education.map((edu) => createEducation(...edu)));
+    setSkills(example.skills.map((skill) => createSkill(...skill)));
+  };
+
   return (
     <>
+      <Controls
+        handleClearClick={handleClearClick}
+        handleExampleClick={handleExampleClick}
+      />
       <Accordion items={accordionItems} />
       <Preview
         general={general}
