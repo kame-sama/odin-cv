@@ -1,5 +1,7 @@
 # Project: CV Application
 
+UPD: [Live!](https://kame-sama.github.io/odin-cv/)
+
 This project is a part of the [React Course](https://www.theodinproject.com/paths/full-stack-javascript/courses/react) on [The Odin Project](https://www.theodinproject.com/). The goal of this project is to create a CV (Curriculum Vitae) application using React.
 
 ## Description
