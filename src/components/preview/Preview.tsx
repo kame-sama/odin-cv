@@ -1,30 +1,32 @@
+import { Ref, forwardRef } from 'react';
 import Header from './Header';
 import Main from './Main';
 import './Preview.css';
 
-interface PreviewProps {
+type PreviewProps = {
   general: GeneralInfo;
   contacts: Contacts;
   experience: Experience[];
   education: Education[];
   skills: Skill[];
-}
+};
 
-function Preview({
-  general,
-  contacts,
-  experience,
-  education,
-  skills,
-}: PreviewProps) {
+const Preview = forwardRef(function Preview(
+  props: PreviewProps,
+  ref: Ref<HTMLDivElement>,
+) {
   return (
     <div className="preview">
-      <div className="preview-body">
-        <Header general={general} contacts={contacts} />
-        <Main experience={experience} education={education} skills={skills} />
+      <div className="preview-body" ref={ref}>
+        <Header general={props.general} contacts={props.contacts} />
+        <Main
+          experience={props.experience}
+          education={props.education}
+          skills={props.skills}
+        />
       </div>
     </div>
   );
-}
+});
 
 export default Preview;

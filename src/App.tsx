@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState, useRef } from 'react';
 import createContacts from './data/create-contacts';
 import createEducation from './data/create-education';
 import createExperience from './data/create-experience';
@@ -13,6 +13,8 @@ import EducationForm from './components/form/EducationForm';
 import SkillsForm from './components/form/SkillsForm';
 import Preview from './components/preview/Preview';
 import Controls from './components/Controls';
+import ReactToPrint from 'react-to-print';
+import Button from './components/Button';
 
 function App() {
   const [general, setGeneral] = useState(createUser(...example.general));
@@ -191,11 +193,21 @@ function App() {
     setSkills(example.skills.map((skill) => createSkill(...skill)));
   };
 
+  const ref = useRef<HTMLDivElement>(null);
+
+  const PrintButton = (
+    <ReactToPrint
+      content={() => ref.current}
+      trigger={() => <Button>Print</Button>}
+    />
+  );
+
   return (
     <>
       <Controls
         handleClearClick={handleClearClick}
         handleExampleClick={handleExampleClick}
+        printButton={PrintButton}
       />
       <Accordion items={accordionItems} />
       <Preview
@@ -204,6 +216,7 @@ function App() {
         experience={experience}
         education={education}
         skills={skills}
+        ref={ref}
       />
     </>
   );
