@@ -1,4 +1,6 @@
-const general = ['Olivia', 'Miller', 'Software Engineer', '/picture.jpg'];
+import imageUrl from '/picture.jpg';
+
+const general = ['Olivia', 'Miller', 'Software Engineer', imageUrl];
 
 const contacts = [
   '555-555-5555',
