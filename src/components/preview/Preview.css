@@ -1,5 +1,7 @@
 .preview {
   border: 1px solid black;
+  position: sticky;
+  top: 1rem;
 }
 
 .preview-body {

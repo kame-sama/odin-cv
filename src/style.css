@@ -1,6 +1,12 @@
 :root {
   font-family: 'Inter Variable', sans-serif;
   font-size: 16px;
+
+  --background-color: #ffffff;
+  --font-color: #272643;
+  --primary-color: #2c698d;
+  --secondary-color: #bae8e8;
+  --secondary-light-color: #e3f6f5;
 }
 
 *,
@@ -30,16 +36,68 @@ svg {
 
 hr {
   height: 2px;
-  background-color: black;
+  background-color: var(--font-color);
   border: 0;
   margin: 0.5rem 0;
 }
 
-#root {
+body {
+  background-color: var(--background-color);
+}
+
+.main {
   padding: 1rem;
   display: flex;
   gap: 1rem;
+  justify-content: center;
   align-items: flex-start;
+}
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  cursor: default;
+}
+
+.main-logo {
+  flex-basis: 128px;
+  align-content: center;
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color);
+}
+
+.main-title > :first-child {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.main-title > :last-child {
+  font-size: 3rem;
+  font-weight: 150;
+  line-height: 1;
+}
+
+.form-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.controls {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  gap: 0.5rem;
+}
+
+#print-button {
+  grid-column: 1 / -1;
 }
 
 .print {

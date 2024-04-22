@@ -8,7 +8,7 @@ function InputFile({ label, ...props }: InputFileProps) {
   return (
     <div className="form-field">
       <input className="visually-hidden" type="file" {...props} />
-      <label className="button" htmlFor={props.id}>
+      <label className="button button-primary" htmlFor={props.id}>
         {label}
       </label>
     </div>

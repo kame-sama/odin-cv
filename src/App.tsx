@@ -15,6 +15,7 @@ import Preview from './components/preview/Preview';
 import Controls from './components/Controls';
 import ReactToPrint from 'react-to-print';
 import Button from './components/Button';
+import MainHeader from './components/MainHeader';
 
 function App() {
   const [general, setGeneral] = useState(createUser(...example.general));
@@ -199,18 +200,21 @@ function App() {
     <ReactToPrint
       bodyClass="print"
       content={() => ref.current}
-      trigger={() => <Button>Print</Button>}
+      trigger={() => <Button id="print-button">Print</Button>}
     />
   );
 
   return (
-    <>
-      <Controls
-        handleClearClick={handleClearClick}
-        handleExampleClick={handleExampleClick}
-        printButton={PrintButton}
-      />
-      <Accordion items={accordionItems} />
+    <div className="main">
+      <div className="form-container">
+        <MainHeader />
+        <Controls
+          handleClearClick={handleClearClick}
+          handleExampleClick={handleExampleClick}
+          printButton={PrintButton}
+        />
+        <Accordion items={accordionItems} />
+      </div>
       <Preview
         general={general}
         contacts={contacts}
@@ -219,7 +223,7 @@ function App() {
         skills={skills}
         ref={ref}
       />
-    </>
+    </div>
   );
 }
 

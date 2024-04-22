@@ -15,22 +15,22 @@
 
 .input,
 .text-area {
-  border: 1px solid black;
+  border: 1px solid var(--font-color);
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  color: rgb(0, 0, 0);
+  color: var(--font-color);
 }
 
 .input:hover,
 .text-area:hover {
-  background-color: lightgray;
+  background-color: var(--secondary-light-color);
 }
 
 .input:focus,
 .text-area:focus {
-  outline: 1px solid black;
-  background-color: lightslategray;
-  color: white;
+  outline: 1px solid var(--font-color);
+  background-color: var(--secondary-color);
+  color: var(--font-color);
 }
 
 .text-area {
@@ -44,12 +44,15 @@
 
 .button {
   cursor: pointer;
-  background-color: black;
-  color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   text-align: center;
+}
+
+.button.button-primary {
+  background-color: var(--primary-color);
+  color: var(--background-color);
 }
 
 .button.button-delete {
@@ -58,7 +61,7 @@
   top: 2;
   right: 0;
   background-color: transparent;
-  color: red;
+  color: var(--primary-color);
   padding: 0;
   border-radius: 0;
   transition: font-weight 200ms ease;
@@ -71,7 +74,8 @@
 }
 
 .button:hover {
-  background-color: darkgray;
+  background-color: var(--secondary-color);
+  color: var(--font-color);
 }
 
 .visually-hidden {
@@ -83,5 +87,6 @@
 }
 
 input.visually-hidden:is(:focus, :focus-within) + .button {
-  outline: 1px solid black;
+  background-color: var(--secondary-color);
+  color: var(--font-color);
 }
