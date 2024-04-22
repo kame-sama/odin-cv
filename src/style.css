@@ -41,3 +41,9 @@ hr {
   gap: 1rem;
   align-items: flex-start;
 }
+
+.print {
+  position: absolute;
+  transform-origin: top left;
+  transform: scale(1.33);
+}

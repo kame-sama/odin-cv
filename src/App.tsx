@@ -197,6 +197,7 @@ function App() {
 
   const PrintButton = (
     <ReactToPrint
+      bodyClass="print"
       content={() => ref.current}
       trigger={() => <Button>Print</Button>}
     />
